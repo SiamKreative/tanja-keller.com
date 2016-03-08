@@ -148,19 +148,6 @@
 		}
 	});
 
-	/* =Skill Bars
-	-------------------------------------------------------------- */
-	$('.bar-fill').waypoint({
-		handler: function () {
-			$(this).each(function () {
-				$(this).animate({
-					width: $(this).attr('data-percent')
-				}, 1500);
-			});
-		},
-		offset: '95%'
-	});
-
 	/* =Lightbox
 	-------------------------------------------------------------- */
 	$('.lightbox-gallery').magnificPopup({

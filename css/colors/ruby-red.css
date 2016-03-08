@@ -13,10 +13,6 @@
 	border-top: 4px solid #ed3200;
 }
 
-.bar-fill {
-	background: #ed3200;
-}
-
 .timeline .entry .time.on:before {
 	border: 1px solid #ed3200;
 	background: #ed3200;
