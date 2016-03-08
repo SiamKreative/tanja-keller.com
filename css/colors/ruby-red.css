@@ -1,7 +1,7 @@
 /* =Color Options
 -------------------------------------------------------------- */
 .highlight {
-	color: #ed3200;
+	font-weight: bold;
 }
 
 #side-nav a.active:after, #side-nav a:hover:after {
