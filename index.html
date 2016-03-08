@@ -328,10 +328,10 @@
 							<label for="name">Name</label>
 							<input type="text" name="name" id="name" />
 							<label for="email">Email</label>
-					        <input type="email" name="email" id="email" />
-					        <label for="message">Message</label>
-					        <textarea name="message" id="message"></textarea>
-					        <input id="submit" type="submit" name="submit" value="Send Email">
+							<input type="email" name="email" id="email" />
+							<label for="message">Message</label>
+							<textarea name="message" id="message"></textarea>
+							<input id="submit" type="submit" name="submit" value="Send Email">
 						</fieldset>
 					</form>
 
@@ -376,14 +376,14 @@
 
 	<!-- Javascript -->
 	<script type="text/javascript">
-	function resizeNow() {
-        var browserwidth = $(window).width();
-        var browserheight = $(window).height();
-        $('.pageloader-content').css('right', ((browserwidth - $(".pageloader-content").width()) / 2)).css('top', ((browserheight - $(".pageloader-content").height()) / 2));
-    }
+		function resizeNow() {
+			var browserwidth = $(window).width();
+			var browserheight = $(window).height();
+			$('.pageloader-content').css('right', ((browserwidth - $(".pageloader-content").width()) / 2)).css('top', ((browserheight - $(".pageloader-content").height()) / 2));
+		}
 
-    resizeNow();
-    $(window).resize(resizeNow);
+		resizeNow();
+		$(window).resize(resizeNow);
 	</script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
