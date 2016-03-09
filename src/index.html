@@ -26,18 +26,16 @@
 	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300|Lekton" rel="stylesheet" type="text/css">
 
 	<!-- Styles -->
+	<!-- build:css css/combined.css -->
 	<link rel="stylesheet" type="text/css" href="css/framework.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
-	
-	<!-- Colors -->
 	<link rel="stylesheet" type="text/css" href="css/colors/ruby-red.css" media="screen">
-	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/aqua-blue.css" media="screen"> -->
-	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/mint-green.css" media="screen"> -->
-	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/rose-pink.css" media="screen"> -->
-	<!-- <link rel="alternate stylesheet" type="text/css" href="css/colors/sunflower-yellow.css" media="screen"> -->
+	<!-- endbuild -->
 
 	<!-- Javascript -->
+	<!-- build:js js/modernizr.js -->
 	<script src="js/modernizr.js"></script>
+	<!-- endbuild -->
 </head>
 <body>
 	<!-- Begin Pageloader -->
@@ -325,7 +323,9 @@
 		resizeNow();
 		$(window).resize(resizeNow);
 	</script>
+	<!-- build:js js/combined.js -->
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
+	<!-- endbuild -->
 </body>
 </html>
