@@ -313,16 +313,6 @@
 
 	<!-- Javascript -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script type="text/javascript">
-		function resizeNow() {
-			var browserwidth = $(window).width();
-			var browserheight = $(window).height();
-			$('.pageloader-content').css('right', ((browserwidth - $(".pageloader-content").width()) / 2)).css('top', ((browserheight - $(".pageloader-content").height()) / 2));
-		}
-
-		resizeNow();
-		$(window).resize(resizeNow);
-	</script>
 	<!-- build:js js/combined.js -->
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>

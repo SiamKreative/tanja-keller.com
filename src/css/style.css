@@ -217,8 +217,11 @@ a:hover {
 	position:absolute;
 	margin:0;
 	opacity:1;
-	top:0;
 	text-align: center;
+    top: 50%;
+    right: 50%;
+    margin-top: -50px;
+    margin-right: -50px;
 }
 
 .pageloader-content .logo {
