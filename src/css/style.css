@@ -538,6 +538,7 @@ header .container {
 	width: 100%;
 	background: url(../images/hero.jpg) no-repeat top;
 	background-size: cover;
+	background-position: 100% 0;
 }
 
 .logo {
