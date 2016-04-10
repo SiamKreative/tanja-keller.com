@@ -201,6 +201,12 @@
 		},
 		offset: '95%'
 	});
+	$('.resume').waypoint({
+		handler: function () {
+			$(this).addClass('on');
+		},
+		offset: '95%'
+	});
 
 	/* =Contact Form
 	-------------------------------------------------------------- */

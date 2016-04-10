@@ -1110,11 +1110,20 @@ table.resume tr.category td {
 	padding-top: 2em;
 	padding-bottom: 1em;
 }
+table.resume tr.category h3:after {
+	display: block;
+	padding-bottom: 10px;
+	content: '';
+	border-bottom: 2px solid #ed3200;
+	transform: scaleX(0.0001);
+	transition: transform 250ms ease-in-out;
+}
+table.resume.on tr.category h3:after {
+	transform: scaleX(1);
+}
 table.resume tr.category h3 {
 	color: white;
 	font-weight: 400;
-	border-bottom: 2px solid #ed3200;
-	padding-bottom: 10px;
 }
 table.resume tbody tr:not(.category):hover td {
 	background: #222;
