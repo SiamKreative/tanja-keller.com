@@ -5,6 +5,7 @@ var cssmin = require('gulp-cssmin');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var surge = require('gulp-surge');
+var browserSync = require('browser-sync').create();
 
 /**
  * Copy images & fonts
@@ -45,7 +46,24 @@ gulp.task('surge', ['default'], function () {
 		project: './dist',
 		domain: 'staging.tanja-keller.com'
 	})
-})
+});
+
+/**
+ * Static Server + watching scss/html files
+ */
+gulp.task('serve', function () {
+	browserSync.init({
+		server: './src'
+	});
+	// watch html and reload browsers when it changes
+	gulp.watch('src/*.html').on('change', browserSync.reload);
+	// watch css and stream to BrowserSync when it changes
+	gulp.watch('src/**/*.css', function () {
+		// grab css files and send them into browserSync.stream
+		gulp.src('src/**/*.css')
+			.pipe(browserSync.stream());
+	});
+});
 
 gulp.task('default', ['copy', 'assets']);
 gulp.task('deploy', ['default', 'surge']);
