@@ -1089,3 +1089,33 @@ footer {
 @media only screen and (min-width : 1200px) {
 
 }
+
+/**
+ * Resume table styles
+ */
+table.resume {
+	margin-bottom: 3em;
+}
+table.resume thead {
+	opacity: 0.75;
+}
+table.resume td {
+	padding: 0.15em 0;
+	transition: background-color 0.1s ease;
+}
+table.resume td:nth-child(2) {
+	padding: 0.15em 1em;
+}
+table.resume tr.category td {
+	padding-top: 2em;
+	padding-bottom: 1em;
+}
+table.resume tr.category h3 {
+	color: white;
+	font-weight: 400;
+	border-bottom: 2px solid #ed3200;
+	padding-bottom: 10px;
+}
+table.resume tbody tr:not(.category):hover td {
+	background: #222;
+}
