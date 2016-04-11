@@ -211,55 +211,34 @@
 	/* =Contact Form
 	-------------------------------------------------------------- */
 	$(function () {
-		$('#contact').validate({
+		var cf = $('#contact_form');
+		cf.on('submit', function (event) {
+			// Prevent normal submission
+			event.preventDefault();
 
-			rules: {
-				name: {
-					required: true,
-					minlength: 2
-				},
-				email: {
-					required: true,
-					email: true
-				},
-				message: {
-					required: true
-				}
-			},
+			// Filter the inputs
+			var data = $(this).find('input[name!=_gotcha], textarea').serializeArray();
 
-			messages: {
-				name: {
-					required: "come on, you have a name don't you?",
-					minlength: "your name must consist of at least 2 characters"
+			// Submit form via AJAX
+			$.ajax({
+				method: cf.attr('method'),
+				data: data,
+				dataType: 'json',
+				url: cf.attr('action'),
+				success: function (data) {
+					cf.find('input').attr('disabled', 'disabled');
+					cf.fadeTo('slow', 0.25, function () {
+						$(this).find('input').attr('disabled', 'disabled');
+						$(this).find('label').css('cursor', 'default');
+						$('#success').fadeIn();
+					});
 				},
-				email: {
-					required: "no email, no message"
-				},
-				message: {
-					required: "um...yea, you have to write something to send this form.",
-					minlength: "thats all? really?"
+				error: function (data) {
+					cf.fadeTo('slow', 0.25, function () {
+						$('#error').fadeIn();
+					});
 				}
-			},
-			submitHandler: function (form) {
-				$(form).ajaxSubmit({
-					type: "POST",
-					data: $(form).serialize(),
-					url: "contact.php",
-					success: function () {
-						$('#contact :input').attr('disabled', 'disabled');
-						$('#contact').fadeTo("slow", 0.15, function () {
-							$(this).find(':input').attr('disabled', 'disabled');
-							$(this).find('label').css('cursor', 'default');
-							$('#success').fadeIn();
-						});
-					},
-					error: function () {
-						$('#contact').fadeTo("slow", 0.15, function () {
-							$('#error').fadeIn();
-						});
-					}
-				});
-			}
+			});
 		});
 	});
 })();
