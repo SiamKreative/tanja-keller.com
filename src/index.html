@@ -328,15 +328,15 @@
 					<h1><a href="mailto:mail@tanja-keller.com">mail@tanja-keller.com</a></h1>
 					<p>Or just send me an email straight through here:</p>
 
-					<form id="contact" action="//formspree.io/mail@tanja-keller.com" method="POST" novalidate="novalidate">
+					<form id="contact_form" action="//formspree.io/mail@tanja-keller.com" method="POST">
 						<fieldset>
 							<input type="text" name="_gotcha" class="mfp-hide" />
 							<label for="name">Name</label>
-							<input type="text" name="name" id="name" />
+							<input type="text" name="name" id="name" required />
 							<label for="email">Email</label>
-							<input type="email" name="email" id="email" />
+							<input type="email" name="email" id="email" required />
 							<label for="message">Message</label>
-							<textarea name="message" id="message"></textarea>
+							<textarea name="message" id="message" required></textarea>
 							<input id="submit" type="submit" name="submit" value="Send Email">
 						</fieldset>
 					</form>
