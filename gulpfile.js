@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var useref = require('gulp-useref');
 var gulpif = require('gulp-if');
-var cssmin = require('gulp-cssmin');
+var cleanCSS = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var htmlmin = require('gulp-htmlmin');
 var surge = require('gulp-surge');
@@ -31,7 +31,7 @@ gulp.task('assets', function () {
 	return gulp.src('./src/*.html')
 		.pipe(useref())
 		.pipe(gulpif('*.js', uglify()))
-		.pipe(gulpif('*.css', cssmin()))
+		.pipe(gulpif('*.css', cleanCSS()))
 		.pipe(gulpif('*.html', htmlmin({
 			collapseWhitespace: true
 		})))
