@@ -241,4 +241,48 @@
 			});
 		});
 	});
+
+	/**
+	 * Load Facebook after 3 seconds using jQuery
+	 * https://developers.facebook.com/docs/javascript/howto/jquery/v2.5
+	 */
+	var FacebookWidget = $('.fb-like');
+	if (FacebookWidget.length) {
+		setTimeout(
+			function () {
+				$.ajaxSetup({
+					cache: true
+				});
+				$.getScript('//connect.facebook.net/en_US/sdk.js', function () {
+					FB.init({
+						appId: '229298810751784',
+						version: 'v2.6'
+					});
+					// Trigger Facebook
+					FB.XFBML.parse();
+					// Trigger Exit Modal
+					exitModal();
+				});
+			}, 3000);
+	}
+
+	/**
+	 * Exit Intent Modal
+	 */
+	function exitModal() {
+		ouibounce($('#ouibounce-modal')[0], {
+			aggressive: true
+		});
+		$('body').on('click', function () {
+			$('#ouibounce-modal').hide();
+		});
+
+		$('#ouibounce-modal .modal-footer').on('click', function () {
+			$('#ouibounce-modal').hide();
+		});
+
+		$('#ouibounce-modal .modal').on('click', function (e) {
+			e.stopPropagation();
+		});
+	}
 })();

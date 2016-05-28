@@ -38,6 +38,7 @@
 	<!-- build:css css/combined.css -->
 	<link rel="stylesheet" type="text/css" href="css/framework.css"/>
 	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/modal.css"/>
 	<link rel="stylesheet" type="text/css" href="css/colors/ruby-red.css" media="screen">
 	<!-- endbuild -->
 
@@ -368,9 +369,28 @@
 		</div><!-- END Container -->
 	</footer><!-- END Footer -->
 
+	<!-- Ouibounce Modal -->
+	<div id="ouibounce-modal">
+		<div class="underlay"></div>
+		<div class="modal">
+			<div class="modal-title">
+				<h3>Don't leave so soon!</h3>
+			</div>
+			<div class="modal-body">
+				<p>Thanks for stoping by!</p>
+				<p>If you like my moves, feel free to like my Facebook below to see new videos, showreel, upcoming work and photos:</p>
+				<div class="fb-like" data-href="https://www.facebook.com/tanjakellerofficial/" data-width="530" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+			</div>
+			<div class="modal-footer">
+				<p>No thanks</p>
+			</div>
+		</div>
+	</div>
+
 	<!-- Javascript -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<!-- build:js js/combined.js -->
+	<script src="js/vendor/ouibounce.min.js"></script>
 	<script src="js/plugins.js"></script>
 	<script src="js/main.js"></script>
 	<!-- endbuild -->
