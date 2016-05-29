@@ -49,18 +49,11 @@
 	/* =Center and Outline
 	-------------------------------------------------------------- */
 	function centerInit() {
-		var hero = $('.hero'),
-			heroContent = $('.hero-content'),
-			contentMargin = ($(window).height() - heroContent.height()) / 2;
+		var hero = $('.hero');
 
 		hero.css({
 			"height": $(window).height() + "px"
 		});
-
-		heroContent.css({
-			"margin-top": contentMargin + "px"
-		});
-
 	}
 
 	centerInit();
