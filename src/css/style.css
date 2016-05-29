@@ -552,7 +552,6 @@ header .container {
 	width: 60px;
 	height: 60px;
 	background: url(../images/arrow@2x.png) no-repeat center;
-	background-size: 30px 30px;
 	opacity: .5;
 
 	-webkit-transition: all 0.3s ease-in-out;
@@ -1127,4 +1126,77 @@ table.resume tr.category h3 {
 }
 table.resume tbody tr:not(.category):hover td {
 	background: #222;
+}
+
+/**
+ * New hero section
+ */
+.hero {
+	background-position: 23% 50%;
+}
+.hero-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 130px;
+	background-color: rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	padding: 0 10%;
+}
+.hero-top-left,
+.hero-top-right {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.hero-top-left {
+	float: left;
+}
+.hero-top-left h1, .hero-top-left h3 {
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 0;
+	line-height: 1;
+}
+.hero-top-left h1 {
+	font-size: 42px;
+	font-family: 'Lekton', sans-serif;
+}
+.hero-top-left h3 {
+	color: #f1f1f1;
+	letter-spacing: 0.2em;
+	font-size: 14px;
+}
+.hero-top-right {
+	display: none;
+	float: right;
+}
+.hero-top-right li {
+	display: inline;
+	text-transform: uppercase;
+	color: white;
+	margin: 0 1em;
+}
+.hero-top-right li a {
+	color: white;
+	letter-spacing: 0.2em;
+	font-size: 13px;
+}
+.hero-arrow {
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	margin-left: -30px;
+}
+@media only screen and (min-width:1200px) {
+	.hero {
+		background-position: 50% 100%;
+	}
+	.hero-top-right {
+		display: block;
+		text-transform: uppercase;
+		color: white;
+		margin: 0 1em;
+	}
 }
