@@ -1338,3 +1338,10 @@ table.resume tbody tr:not(.category):hover td {
         transform: translateX(-25%)
     }
 }
+
+/**
+ * Compcard
+ */
+.compcard {
+	text-align: right;
+}
