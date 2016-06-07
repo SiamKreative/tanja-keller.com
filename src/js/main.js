@@ -146,19 +146,11 @@
 	$('.lightbox-gallery').magnificPopup({
 		delegate: '.lightbox',
 		type: 'image',
-		mainClass: 'mfp-with-zoom mfp-fade',
+		mainClass: 'mfp-fade',
 		gallery: {
 			enabled: true,
 			navigateByImgClick: true,
 			preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-		},
-		zoom: {
-			enabled: true,
-			duration: 300,
-			easing: 'ease-in-out',
-			opener: function (openerElement) {
-				return openerElement.is('.atvImg') ? openerElement : openerElement.find('.atvImg');
-			}
 		}
 	});
 	$('.lightbox-youtube').magnificPopup({
