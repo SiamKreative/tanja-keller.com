@@ -44,7 +44,7 @@ gulp.task('assets', function () {
 gulp.task('surge', ['default'], function () {
 	return surge({
 		project: './dist',
-		domain: 'staging.tanja-keller.com'
+		domain: 'tanja-keller.com'
 	})
 });
 
