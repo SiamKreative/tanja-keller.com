@@ -22,7 +22,11 @@ gulp.task('copyfonts', function () {
 	gulp.src('./src/icon-fonts/*.{eot,svg,ttf,woff}')
 		.pipe(gulp.dest('dist/icon-fonts'));
 });
-gulp.task('copy', ['copyimages', 'copyfavicons', 'copyfonts']);
+gulp.task('copypdf', function () {
+	gulp.src('./src/pdf/**')
+		.pipe(gulp.dest('dist/pdf'));
+});
+gulp.task('copy', ['copyimages', 'copyfavicons', 'copyfonts', 'copypdf']);
 
 /**
  * Concatenate & minify static assets
