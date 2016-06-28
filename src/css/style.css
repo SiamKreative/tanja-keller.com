@@ -1066,29 +1066,6 @@ footer {
   }
 }
 
-
-/* =Responsive Styles
--------------------------------------------------------------- */
-/* Landscape Phones */ 
-@media only screen and (min-width : 480px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-}
-
 /**
  * Resume table styles
  */
@@ -1339,9 +1316,30 @@ table.resume tbody tr:not(.category):hover td {
     }
 }
 
-/**
- * Compcard
- */
-.compcard {
-	text-align: right;
+.imdb {
+	margin-bottom: 15px;
+}
+
+/* =Responsive Styles
+-------------------------------------------------------------- */
+/* Landscape Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.compcard {
+		text-align: right;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
