@@ -1067,45 +1067,6 @@ footer {
 }
 
 /**
- * Resume table styles
- */
-table.resume {
-	margin-bottom: 3em;
-}
-table.resume thead {
-	opacity: 0.75;
-}
-table.resume td {
-	padding: 0.15em 0;
-	transition: background-color 0.1s ease;
-}
-table.resume td:nth-child(2) {
-	padding: 0.15em 1em;
-}
-table.resume tr.category td {
-	padding-top: 2em;
-	padding-bottom: 1em;
-}
-table.resume tr.category h3:after {
-	display: block;
-	padding-bottom: 10px;
-	content: '';
-	border-bottom: 2px solid #ed3200;
-	transform: scaleX(0.0001);
-	transition: transform 250ms ease-in-out;
-}
-table.resume.on tr.category h3:after {
-	transform: scaleX(1);
-}
-table.resume tr.category h3 {
-	color: white;
-	font-weight: 400;
-}
-table.resume tbody tr:not(.category):hover td {
-	background: #222;
-}
-
-/**
  * New hero section
  */
 .hero {
